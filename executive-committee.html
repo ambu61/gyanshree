@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Committee | Gyanshree School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .committee-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .committee-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+
+    <!-- Navbar -->
+    <header class="bg-white sticky top-0 z-50 border-b border-slate-100">
+        <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center">
+                    <div class="w-10 h-10 bg-indigo-900 rounded-lg flex items-center justify-center text-white font-black text-xl">G</div>
+                    <div class="ml-3">
+                        <span class="block font-bold tracking-tight text-lg text-slate-800 leading-none">GYANSHREE</span>
+                        <span class="text-[10px] text-indigo-600 font-bold tracking-widest uppercase">Leadership</span>
+                    </div>
+                </a>
+            </div>
+            <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-indigo-600 flex items-center transition-colors tracking-widest">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> BACK
+            </a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-16 bg-white border-b border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">Our Executive Committee</h1>
+            <div class="w-20 h-1.5 bg-indigo-600 mx-auto mt-6 rounded-full"></div>
+            <p class="mt-6 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+                Guided by the vision and expertise of distinguished leaders dedicated to excellence in education.
+            </p>
+        </div>
+    </section>
+
+    <!-- Committee Grid -->
+    <main class="container mx-auto px-6 py-20 max-w-6xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Member 1 -->
+            <div class="committee-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                <div class="relative aspect-[4/5] bg-slate-50">
+                    <img src="https://www.gyanshree.in/site/img/our-team/kc_jain.png" alt="Shri K.C. Jain" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold text-slate-800 tracking-tight">Shri K.C. Jain</h3>
+                    <p class="text-indigo-600 text-xs font-bold uppercase tracking-wider mt-1 mb-3">Former Chief Commissioner</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Income Tax (Accounts)</p>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="committee-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                <div class="relative aspect-[4/5] bg-slate-50">
+                    <img src="https://www.gyanshree.in/site/img/our-team/Preeti-Agarwal.png" alt="Smt. Preeti Agarwal" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold text-slate-800 tracking-tight">Smt. Preeti Agarwal</h3>
+                    <p class="text-indigo-600 text-xs font-bold uppercase tracking-wider mt-1 mb-3">Director</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Haldiram's Group</p>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="committee-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                <div class="relative aspect-[4/5] bg-slate-50">
+                    <img src="https://www.gyanshree.in/site/img/our-team/pradeep_srivastava.png" alt="Shri Pradeep Srivastava" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold text-slate-800 tracking-tight">Shri Pradeep Srivastava</h3>
+                    <p class="text-indigo-600 text-xs font-bold uppercase tracking-wider mt-1 mb-3">Former DGP</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Chandigarh</p>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="committee-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                <div class="relative aspect-[4/5] bg-slate-50">
+                    <img src="https://www.gyanshree.in/site/img/our-team/ritaKapur.png" alt="Smt. Rita Kapur" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold text-slate-800 tracking-tight">Smt. Rita Kapur</h3>
+                    <p class="text-indigo-600 text-xs font-bold uppercase tracking-wider mt-1 mb-3">Founder Director</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Gyanshree School</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-16 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-[10px] font-black text-slate-500 uppercase tracking-[0.5em]">
+                &copy; 2025 Gyanshree School • Executive Governance
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
