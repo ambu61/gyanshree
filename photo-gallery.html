@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Gyanshree School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gallery-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-zoom-container {
+            overflow: hidden;
+            position: relative;
+            background-color: #f1f5f9;
+        }
+
+        .gallery-image {
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-card:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Style */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-6 max-w-6xl flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white shadow-lg">
+                    <i data-lucide="image" class="w-5 h-5"></i>
+                </div>
+                <div class="ml-4">
+                    <h1 class="text-xl font-black tracking-tight uppercase text-slate-900">Photo Gallery</h1>
+                    <p class="text-[10px] text-emerald-600 font-bold tracking-widest uppercase">Memories at Gyanshree</p>
+                </div>
+            </div>
+            <a href="index.html" class="px-4 py-2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600 hover:bg-emerald-600 hover:text-white transition-all flex items-center uppercase tracking-widest">
+                <i data-lucide="arrow-left" class="w-3 h-3 mr-2"></i> Back
+            </a>
+        </div>
+    </header>
+
+    <!-- Gallery Grid -->
+    <main class="container mx-auto px-6 py-12 max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Item 1: Independence Day -->
+            <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 group cursor-pointer" onclick="openLightbox('https://www.gyanshree.in/site/AdminContaintImage/1.JPG', 'Independence Day')">
+                <div class="image-zoom-container aspect-[3/2]">
+                    <img src="https://www.gyanshree.in/site/AdminContaintImage/1.JPG" alt="Independence Day" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="maximize" class="text-white w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold text-slate-700 uppercase tracking-wide text-sm">Independence Day</h3>
+                </div>
+            </div>
+
+            <!-- Item 2: Grand Slam 2019-20 -->
+            <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 group cursor-pointer" onclick="openLightbox('https://www.gyanshree.in/site/AdminContaintImage/2.JPG', 'Grand Slam 2019-20')">
+                <div class="image-zoom-container aspect-[3/2]">
+                    <img src="https://www.gyanshree.in/site/AdminContaintImage/2.JPG" alt="Grand Slam 2019-20" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="maximize" class="text-white w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold text-slate-700 uppercase tracking-wide text-sm">Grand Slam 2019-20</h3>
+                </div>
+            </div>
+
+            <!-- Item 3: School Trip Jaipur -->
+            <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 group cursor-pointer" onclick="openLightbox('https://www.gyanshree.in/site/AdminContaintImage/3.JPG', 'School Trip Jaipur - Junior')">
+                <div class="image-zoom-container aspect-[3/2]">
+                    <img src="https://www.gyanshree.in/site/AdminContaintImage/3.JPG" alt="School Trip Jaipur" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="maximize" class="text-white w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold text-slate-700 uppercase tracking-wide text-sm">School Trip Jaipur - Junior</h3>
+                </div>
+            </div>
+
+            <!-- Item 4: GRAND SLAM 2023-24 -->
+            <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 group cursor-pointer" onclick="openLightbox('https://www.gyanshree.in/site/AdminContaintImage/4.JPG', 'GRAND SLAM 2023-24')">
+                <div class="image-zoom-container aspect-[3/2]">
+                    <img src="https://www.gyanshree.in/site/AdminContaintImage/4.JPG" alt="GRAND SLAM 2023-24" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="maximize" class="text-white w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold text-slate-700 uppercase tracking-wide text-sm">GRAND SLAM 2023-24</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full View">
+        <div class="absolute bottom-10 text-white text-center w-full">
+            <p id="lightbox-caption" class="text-xl font-bold uppercase tracking-widest"></p>
+            <p class="text-sm opacity-60">Click anywhere to close</p>
+        </div>
+    </div>
+
+    <footer class="py-12 border-t border-slate-200 mt-auto bg-white text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">&copy; 2025 Gyanshree School • Photo Archive</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function openLightbox(src, title) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            
+            img.src = src;
+            caption.innerText = title;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
