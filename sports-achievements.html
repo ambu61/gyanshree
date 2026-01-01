@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Achievements | Gyanshree School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
+        .achievement-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f1f5f9; }
+        .achievement-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(234, 88, 12, 0.1); border-color: #ffedd5; }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center">
+                    <div class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white font-black text-xl shadow-lg shadow-orange-200">G</div>
+                    <span class="ml-3 font-bold tracking-tight text-xl text-slate-800 uppercase">Gyanshree Sports</span>
+                </a>
+            </div>
+            <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-orange-600 flex items-center transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> HOME
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+            </svg>
+        </div>
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-orange-50 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                Hall of Fame
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 uppercase">Champions of Gyanshree</h1>
+            <p class="text-orange-100 text-lg md:text-xl opacity-90 font-light max-w-2xl mx-auto leading-relaxed">
+                Celebrating the grit, determination, and spectacular victories of our student-athletes across regional and national arenas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 max-w-5xl flex-grow">
+        
+        <div class="flex items-center justify-between mb-12">
+            <h2 class="text-2xl font-bold text-slate-800">Academic Session 2024-25</h2>
+            <div class="h-px bg-slate-200 flex-grow ml-8 hidden md:block"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- October -->
+            <a href="https://www.gyanshree.in/site/AchievementsUnder/11.pdf" target="_blank" class="achievement-card bg-white p-8 rounded-3xl group">
+                <div class="flex items-start justify-between">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                        <i data-lucide="trophy" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-4xl font-black text-slate-100 group-hover:text-orange-100 transition-colors">10</span>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">October Achievements</h3>
+                    <p class="text-slate-500 mt-2 leading-relaxed">National and Zonal level accolades in Basketball and Athletics.</p>
+                </div>
+                <div class="mt-8 flex items-center text-orange-600 font-bold text-sm">
+                    VIEW REPORT <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- September -->
+            <a href="https://www.gyanshree.in/site/AchievementsUnder/12.pdf" target="_blank" class="achievement-card bg-white p-8 rounded-3xl group">
+                <div class="flex items-start justify-between">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-4xl font-black text-slate-100 group-hover:text-orange-100 transition-colors">09</span>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">September Achievements</h3>
+                    <p class="text-slate-500 mt-2 leading-relaxed">Outstanding performance in Inter-School Swimming and Football meets.</p>
+                </div>
+                <div class="mt-8 flex items-center text-orange-600 font-bold text-sm">
+                    VIEW REPORT <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- August -->
+            <a href="https://www.gyanshree.in/site/AchievementsUnder/13.pdf" target="_blank" class="achievement-card bg-white p-8 rounded-3xl group">
+                <div class="flex items-start justify-between">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                        <i data-lucide="medal" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-4xl font-black text-slate-100 group-hover:text-orange-100 transition-colors">08</span>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">August Achievements</h3>
+                    <p class="text-slate-500 mt-2 leading-relaxed">Honoring our champions from the Independence Day Sports Festival.</p>
+                </div>
+                <div class="mt-8 flex items-center text-orange-600 font-bold text-sm">
+                    VIEW REPORT <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- April-May -->
+            <a href="https://www.gyanshree.in/site/AchievementsUnder/14.pdf" target="_blank" class="achievement-card bg-white p-8 rounded-3xl group">
+                <div class="flex items-start justify-between">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                        <i data-lucide="star" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-4xl font-black text-slate-100 group-hover:text-orange-100 transition-colors">04</span>
+                </div>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">April — May Achievements</h3>
+                    <p class="text-slate-500 mt-2 leading-relaxed">The season opening victories and summer training camp highlights.</p>
+                </div>
+                <div class="mt-8 flex items-center text-orange-600 font-bold text-sm">
+                    VIEW REPORT <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Call to action/Stats -->
+        <div class="mt-20 bg-slate-900 rounded-3xl p-10 text-white flex flex-col md:flex-row items-center justify-between shadow-2xl">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h4 class="text-2xl font-bold italic">Always Aiming Higher.</h4>
+                <p class="text-slate-400 mt-1">Our sports department nurtures talent for global success.</p>
+            </div>
+            <div class="flex space-x-12">
+                <div class="text-center">
+                    <div class="text-3xl font-black text-orange-500">50+</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-500 mt-1">Gold Medals</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-orange-500">12</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-500 mt-1">Disciplines</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xs uppercase tracking-[0.4em] font-bold text-slate-400">&copy; 2025 Gyanshree School Sports Department</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
