@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery | Gyanshree School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .video-box {
+            background: #ffffff;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .video-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #3b82f6;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            items-center: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .video-box:hover .thumbnail-container img {
+            opacity: 1;
+        }
+
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+        .video-box:hover .play-overlay {
+            background: rgba(0,0,0,0);
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .video-box:hover .play-button {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 py-6 sticky top-0 z-50">
+        <div class="container mx-auto px-6 max-w-6xl flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white shadow-lg">
+                    <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                </div>
+                <div class="ml-4">
+                    <h1 class="text-xl font-black tracking-tight uppercase text-slate-900">Video Gallery</h1>
+                    <p class="text-[10px] text-blue-600 font-bold tracking-widest uppercase">Gyanshree School Media</p>
+                </div>
+            </div>
+            <a href="index.html" class="px-4 py-2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600 hover:bg-blue-600 hover:text-white transition-all flex items-center uppercase tracking-widest">
+                <i data-lucide="home" class="w-3 h-3 mr-2"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-6 py-12 max-w-6xl">
+        
+        <div class="video-grid">
+            
+            <!-- Video 1 -->
+            <a href="https://www.youtube.com/watch?v=64NhXowf2-E" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/64NhXowf2-E/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">We the Shreeyans, virtuous and strong</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 2 -->
+            <a href="https://www.youtube.com/watch?v=ow8yy_tQdX4" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/ow8yy_tQdX4/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">Countdown to “A slice of summer”</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 3 -->
+            <a href="https://www.youtube.com/watch?v=6_poBv3GiY8" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/6_poBv3GiY8/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">Summer Highlights - Edition I</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 4 -->
+            <a href="https://www.youtube.com/watch?v=s-Hge_rRJdI" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/s-Hge_rRJdI/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">Summer Highlights - Edition II</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 5 -->
+            <a href="https://www.youtube.com/watch?v=TrY0Zk_CNe4" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/TrY0Zk_CNe4/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">International Yoga Day - English Message</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 6 -->
+            <a href="https://www.youtube.com/watch?v=bIafRZxJyR4" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/bIafRZxJyR4/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">International Yoga Day - Hindi Message</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 7 -->
+            <a href="https://www.youtube.com/watch?v=yPwwyg0RqCI" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/yPwwyg0RqCI/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">Creativity Marathon 2020 Winners</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+            <!-- Video 8 -->
+            <a href="https://www.youtube.com/watch?v=CpJc-4IYvQE" target="_blank" class="video-box">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/CpJc-4IYvQE/hqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button"><i data-lucide="play" class="fill-current"></i></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-slate-900 leading-snug">Summer Camp 2022 Highlights</h3>
+                    <p class="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Watch on YouTube</p>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer class="py-12 border-t border-slate-200 mt-auto bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">&copy; 2025 Gyanshree School • Noida</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
