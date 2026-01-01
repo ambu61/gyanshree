@@ -3,327 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyan Buzz | Gyanshree School Newsletter Archive</title>
+    <title>Gyan Buzz Archive | Gyanshree School</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        
-        .buzz-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .buzz-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px -5px rgba(225, 29, 72, 0.15);
-            border-color: #fb7185;
-        }
-        
-        .gradient-header {
-            background: linear-gradient(135deg, #9f1239 0%, #e11d48 100%);
-        }
-
-        html { scroll-behavior: smooth; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .hero-gradient { background: linear-gradient(135deg, #4c0519 0%, #9f1239 100%); }
+        .buzz-card:hover { transform: translateY(-4px); }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-900 min-h-screen">
 
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="https://www.gyanshree.in/site/assets/images/gyan-logo.jpg" alt="Logo" class="h-10 w-auto rounded">
-                <div class="ml-3">
-                    <span class="block font-black text-gray-800 leading-tight uppercase tracking-tighter">Gyanshree School</span>
-                    <span class="text-[10px] text-rose-600 font-bold tracking-[0.2em] uppercase">Newsletter Archive</span>
-                </div>
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="w-10 h-10 bg-rose-600 rounded-lg flex items-center justify-center text-white font-black text-xl">G</a>
+                <a href="index.html" class="font-bold tracking-tight text-xl">GYANSHREE</a>
             </div>
-            <a href="https://www.gyanshree.in/site/" class="flex items-center text-xs font-bold text-gray-500 hover:text-rose-600 transition tracking-widest">
-                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> MAIN SITE
+            <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-rose-600 flex items-center">
+                <i data-lucide="chevron-left" class="w-4 h-4 mr-1"></i> BACK TO HOME
             </a>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-black italic tracking-tighter mb-4">GYAN BUZZ</h1>
+            <p class="text-rose-100 text-lg opacity-80">Our Monthly Newsletter Digital Archive</p>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <!-- Hero -->
-        <section class="gradient-header text-white py-12 px-4 relative overflow-hidden">
-            <div class="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4">
-                <i data-lucide="zap" class="w-64 h-64"></i>
+    <main class="container mx-auto px-6 py-12 max-w-6xl">
+        <!-- 2025 Section -->
+        <div class="mb-12">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="text-3xl font-black text-slate-300">2025</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
             </div>
-            <div class="container mx-auto max-w-4xl text-center relative z-10">
-                <h1 class="text-5xl md:text-7xl font-black mb-4 italic tracking-tighter uppercase">GYAN BUZZ</h1>
-                <p class="text-rose-100 text-lg font-medium opacity-90 tracking-wide">Digital editions of our school's monthly newsletter</p>
-            </div>
-        </section>
-
-        <!-- Nav -->
-        <div class="bg-white border-b border-gray-200 py-3 overflow-x-auto no-scrollbar">
-            <div class="container mx-auto px-4 flex justify-center space-x-8 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                <a href="#2025" class="hover:text-rose-600">2025</a>
-                <a href="#2024" class="hover:text-rose-600">2024</a>
-                <a href="#2023" class="hover:text-rose-600">2023</a>
-                <a href="#2022" class="hover:text-rose-600">2022</a>
-                <a href="#2021" class="hover:text-rose-600">2021</a>
-                <a href="#2020" class="hover:text-rose-600">2020</a>
-                <a href="#2019" class="hover:text-rose-600">2019</a>
-                <a href="#2018" class="hover:text-rose-600">2018</a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://www.gyanshree.in/site/img/pdf/gyanbuzz_april-to-june-2025.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center group transition-all hover:shadow-lg hover:border-rose-200">
+                    <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <span class="ml-4 font-bold text-slate-700">April to June</span>
+                </a>
             </div>
         </div>
 
-        <section class="py-12 px-4">
-            <div class="container mx-auto max-w-6xl">
-                
-                <!-- 2025 -->
-                <div id="2025" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2025</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/gyanbuzz_april-to-june-2025.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April to June</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2024 -->
-                <div id="2024" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2024</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_April_to_June_2024.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April to June</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_January_to_March_2024.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">January to March</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2023 -->
-                <div id="2023" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2023</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_November_and_December-2023.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Nov. & Dec.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_sep-oct.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Sep. & Oct.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_August.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">August</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_July_2023.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_April_to_June_2023.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April to June</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_Februay_March-23.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Feb. to March</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_January_2023.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">January</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2022 -->
-                <div id="2022" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2022</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_December_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">December</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz-November_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">November</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_Sep-Oct_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Sep. to Oct.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_August_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">August</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_July_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_April_to_June_2022.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April to June</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2021 -->
-                <div id="2021" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2021</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz-Jan_to_Mar.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Jan. to March</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_Nov_to_Dec.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Nov. to Dec.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_July_to_October.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July to October</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz_April-June_2021.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April to June</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz-January_to_March_21.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Jan. to March</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2020 -->
-                <div id="2020" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2020</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz-December-20.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">December</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz_November.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">November</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz_July_to_September.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July & Sep.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz-Apr-June_2020.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April & June</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2019 -->
-                <div id="2019" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2019</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz_November_and_December_2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">Nov. & Dec.</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan_Buzz_October_2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">October</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan Buzz September 2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">September</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan Buzz August 2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">August</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan Buzz July 2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/Gyan Buzz April &amp; May 2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">April & May</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-January2019.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">January</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2018 -->
-                <div id="2018" class="mb-16 scroll-mt-24">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <h2 class="text-4xl font-black text-gray-200">2018</h2>
-                        <div class="h-px bg-gray-200 flex-grow"></div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-December2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">December</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-November2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">November</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-October2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">October</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-September2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">September</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-August2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">August</span>
-                        </a>
-                        <a href="https://www.gyanshree.in/site/img/pdf/GyanBuzz-July2018.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center group">
-                            <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
-                            <span class="ml-4 font-bold text-gray-700">July</span>
-                        </a>
-                    </div>
-                </div>
-
+        <!-- 2024 Section -->
+        <div class="mb-12">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="text-3xl font-black text-slate-300">2024</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
             </div>
-        </section>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_April_to_June_2024.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center group transition-all hover:shadow-lg hover:border-rose-200">
+                    <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
+                    <span class="ml-4 font-bold text-slate-700">April to June</span>
+                </a>
+                <a href="https://www.gyanshree.in/site/img/pdf/Gyanbuzz_January_to_March_2024.pdf" target="_blank" class="buzz-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center group transition-all hover:shadow-lg hover:border-rose-200">
+                    <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-6 h-6"></i></div>
+                    <span class="ml-4 font-bold text-slate-700">January to March</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footnote -->
+        <div class="mt-20 text-center text-slate-400 text-xs uppercase tracking-[0.2em]">
+            <p>&copy; 2025 Gyanshree School</p>
+        </div>
     </main>
 
-    <footer class="bg-gray-950 py-16 text-center border-t border-white/5">
-        <div class="container mx-auto px-4">
-            <img src="https://www.gyanshree.in/site/assets/images/gyan-logo.jpg" alt="Logo" class="h-14 w-auto mx-auto mb-6 grayscale brightness-200 opacity-30">
-            <p class="text-[10px] text-gray-600 font-black tracking-[0.4em] uppercase">
-                &copy; 2025 Gyanshree School | Gyan Buzz Digital Repository
-            </p>
-        </div>
-    </footer>
-
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        });
+        lucide.createIcons();
     </script>
 </body>
 </html>
